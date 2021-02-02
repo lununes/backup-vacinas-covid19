@@ -1,0 +1,1170 @@
+/* ----------------------------------------------------------------
+	CSS PARA O CURSO VACINAS COVID-19:
+
+	Este css sobrescreve o css original estrutural do tema.
+	Configurações novas de CSS devem também ser inseridas aqui.
+-----------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Variáveis
+--------------------------------------------------------------*/
+
+:root {
+
+    /* Cores principais */
+	--azul-escuro: #301b5e; /*Azul Escuro*/
+	--azul-claro: #0193DA; /*Azul Claro*/
+	--azul-clarissimo: #3DD1EA; /*Azul Claríssimo (contraste com fundos escuros)*/
+	--azul-medio: #065D87; /*Azul Médio*/
+
+	/* Cores neutras */
+	--preto: #333; /*Preto*/
+	--cinza-escuro:#888; /*Cinza Escuro*/
+	--cinza-medio: #f1f1f1; /*Cinza Médio*/
+	--cinza-claro: #F9F9F9; /*Cinza Claro*/
+
+	/* Cores de apoio */
+	--rosa: #f74a89; /*Rosa*/
+	--lilas:#874F9A; /*Lilás*/
+	--laranja: #E28130; /*Laranja*/
+	--vermelho: #E82535; /*Vermelho*/
+
+    --marrom: #b2550f; /*Marrom*/
+	--marrom-pressed: #99471c; /*Marrom  Pressed*/
+	
+    --laranja-over: #febf00; /*Mostarda*/
+    --laranja-pressed: #b2550f; /*Bronze*/
+
+	/* Cores com transparência*/
+	--preto-alpha: rgba(0, 0, 0, 0.2); /*Preto com transparência*/
+	--azul-escuro-alpha: rgba(48, 27, 87, 0.4); /*Azul Escuro com transparência*/
+	--azul-claro-alpha: rgba(1,147,218,0.4); /*Azul Claro com transparência*/
+
+    --laranja-alpha: rgba(255, 136, 49, 0.2); /*Laranja*/
+	--marrom-pressed-alpha: rgba(153, 71, 28, 0.8);
+
+    /* Fundos */
+    --bg-header: url(../img/bg-header.jpg); 
+    --bg-topo-mobile: url(../img/bg-topo-mobile2.png); 
+    --bg-topo: url(../img/bg-topo.png);
+	/* --bg-section: #F9F9F9; */
+	--bg-section: #DEDEDE; 
+	--bg-section2: url(../img/bg2.png);
+	
+	/* Família tipográfica */
+	--titulos: 'Poppins', sans-serif;
+	--subtitulos: 'PT Serif', serif;
+	--texto-corrido: 'Lato', sans-serif; 
+
+	/* Hierarquia dos títulos para Mobile */
+	--h1-mobile: 2.3rem; /*42px*/
+	--h2-mobile: 1.7rem; /*32x*/
+	--h3-mobile: 1.55rem; /*28px*/
+	--h4-mobile: 1.33rem; /*24px*/
+	--h5-mobile: 1.11rem;  /*20px*/
+	--h6-mobile: 1rem;  /*1rem = 18px*/
+
+	/* Hierarquia dos títulos para Desktop */
+	--h1-desktop: 3rem; /*60px*/
+	--h2-desktop: 2.2rem; /*44px*/
+	--h3-desktop: 1.8rem; /*36px*/
+	--h4-desktop: 1.5rem; /*30px*/
+	--h5-desktop: 1.15rem; /*23px*/
+	--h6-desktop: 1rem;  /*1rem = 20px*/
+
+	--lead: 1.25rem; /*25px*/
+
+	--titulo-entrelinha-desktop: 1.2rem; /*120% tamanho da fonte*/
+	--texto-corrido-entrelinha-desktop:1.6rem /*160% tamanho da fonte*/
+
+	/* 
+	Como estava no desktop:
+	--h1-desktop: 2.4rem; 48px
+	--h2-desktop: 2rem; 40px
+	--h3-desktop: 1.7rem; 34px
+	--h4-desktop: 1.4rem; 28px
+	--h5-desktop: 1.25rem; 24px
+	--h6-desktop: 1rem;  1rem = 20px */
+
+	/* --h1-desktop: 3rem; /60px/
+	--h2-desktop: 2.25rem; /45px/
+	--h3-desktop: 1.75rem; /35px/
+	--h4-desktop: 1.5rem;/30px/
+	--h5-desktop: 1.25rem; /25p/
+	--h6-desktop: 1rem;  /20p/ 
+
+	--lead :1.25rem; /24px/
+	*/
+}
+
+/*--------------------------------------------------------------
+# Fim das Variáveis
+--------------------------------------------------------------*/
+
+/* Cores
+------------------------*/
+
+/*Para texto e ícones*/
+.azul-escuro {color: var(--azul-escuro) !important;}
+.azul-claro {color: var(--azul-claro) !important;}
+.azul-clarissimo {color: var(--azul-clarissimo) !important;}
+.azul-medio {color: var(--azul-medio) !important;}
+.cinza-claro {color: var(--cinza-claro) !important;}
+.cinza-medio {color: var(--cinza-medio) !important;}
+.cinza-escuro {color: var(--cinza-escuro) !important;}
+.preto {color: var(--preto) !important;}
+.rosa {color: var(--rosa) !important;}
+.lilas {color: var(--lilas) !important;}
+.laranja {color: var(--laranja) !important;}
+.vermelho {color: var(--vermelho) !important;}
+
+/*Para fundos*/
+.bg-azul-escuro {background-color: var(--azul-escuro) !important;}
+.bg-azul-claro {background-color: var(--azul-claro) !important;}
+.bg-azul-medio {background-color: var(--azul-medio) !important;}
+.bg-cinza-claro {background-color: var(--cinza-claro) !important;}
+.bg-cinza-medio {background-color: var(--cinza-medio) !important;}
+.bg-cinza-escuro {background-color: var(--cinza-escuro) !important;}
+.bg-preto {background-color: var(--preto) !important;}
+.bg-rosa {background-color: var(--rosa) !important;}
+.bg-lilas {background-color: var(--lilas) !important;}
+.bg-laranja {background-color: var(--laranja) !important;}
+.bg-vermelho {background-color: var(--vermelho) !important;}
+.bg-section {background: var(--bg-section) !important;}
+
+
+/* Tipografia
+------------------------*/
+html {
+	font-size:18px; /*1rem = 18px*/
+}
+
+body {
+	background-color:var(--cinza-claro)!important;
+	line-height: 1.75;
+	color: var(--preto);
+	font-family: var(--texto-corrido);
+	font-weight: 400 !important;
+	word-break:normal;
+}
+
+a {
+	text-decoration:underline !important;
+	color: var(--azul-claro);
+}
+
+a:hover { 
+	text-decoration:none !important;
+	color: var(--azul-claro); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--azul-escuro);
+	font-weight: 600;
+	line-height: 1.2;
+	margin: 0 0 15px 0;
+	font-family: var(--titulos);
+}
+
+h2, h3 {font-weight: 700;}
+
+h1 {font-size: var(--h1-mobile);}
+
+h2 {font-size: var(--h2-mobile);}
+
+h3 {font-size: var(--h3-mobile);}
+
+h4 {font-size: var(--h4-mobile);}
+
+h5 {font-size: var(--h5-mobile);}
+
+h6 {font-size: var(--h6-mobile);}
+
+/* Heading Block (Títulos h2 e h3 + Antetítulo (opcional) Lead (opcional) + Separador (obrigatório)*/
+
+.heading-block {margin-bottom: 25px;}
+
+.container.titulo-aula .heading-block {margin-bottom: 0;} /*Aqui vai valer apenas para os títulos das aulas, no início da página*/
+
+/* Antetítulo */
+.heading-block .before-heading {
+    font-size: var(--h6-desktop);
+    font-family: var(--subtitulos);
+    color: var(--azul-claro);
+}
+
+/* Cores e Tamanhos dos Títulos Heading Block*/
+.heading-block h2, 
+.heading-block h3 {
+	color: var(--azul-escuro);
+	text-transform: none;
+}
+
+.heading-block h2 { font-size: var(--h2-mobile);}
+.heading-block h3 { font-size: var(--h3-mobile);}
+
+/*Separador*/
+.heading-block::after {
+    border-top: 2px solid var(--azul-claro);
+    margin:20px 0;
+}
+/* Fim do Heading Block (Títulos h2 e h3 + Antetítulo (opcional) Lead (opcional) + Separador (obrigatório)*/
+
+.lead {
+	font-size: var(--lead) !important;
+	font-weight: 400 !important;
+	color:var(--cinza-escuro);
+	letter-spacing: -.03125rem;
+	margin: 0.5rem 0;
+}
+
+p {line-height: 1.75;}
+
+/* Fonte e Legenda das imagens */
+.fonte,
+.source {
+	font-size:0.9rem;
+}
+
+.legenda,
+.reference-title {
+	font-size:0.8rem;
+	font-weight:600;
+	margin-bottom:0;
+}
+.list-group-item { font-weight: 400; }
+
+/* Desktops*/
+@media (min-width: 992px) {
+
+	html {font-size:20px; /*1rem = 20px*/}
+
+	h1 {font-size: var(--h1-desktop);}
+
+	h2 {font-size:  var(--h2-desktop);}
+
+	h3 {font-size:  var(--h3-desktop);}
+
+	h4 {font-size:  var(--h4-desktop);}
+
+	h5 {font-size: var(--h5-desktop);}
+
+	h6 {font-size: var(--h6-desktop);}
+
+	/*Heading Blocks*/
+	.heading-block h2 { font-size: var(--h2-desktop);}
+
+	.heading-block h3 { font-size: var(--h3-desktop);}
+
+	#content p {line-height: 1.6;}
+
+	.fonte,
+	.source {
+	font-size:0.7rem;
+}
+}
+
+/* Fim da Tipografia
+------------------------*/
+
+
+/* Conteúdo
+------------------------*/
+#content {background-color:var(--cinza-claro);}
+
+.content-wrap {padding:20px 0;}
+
+#content .container {
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+/*Altera somente o primeiro container, com o nome da aula*/
+#content .container.titulo-aula {
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+/*.content-wrap {padding: 2rem 0;} */
+
+/* Fim do Conteúdo
+------------------------*/
+
+/* Botão de voltar ao topo (visivel no desktop)
+------------------------*/
+
+#gotoTop {
+	background-color: var(--preto-alpha);
+}
+
+#gotoTop:hover {
+    background-color: var(--azul-claro);
+}
+
+/* Fim do Botão de voltar ao topo (visivel no desktop)
+------------------------*/
+
+/* Menu de Tópicos
+------------------------*/
+
+#nav-menu-container {
+	background: #fff;
+	font-size: 0.7rem;
+	line-height: 1.1rem;
+	margin: 0;
+	padding:15px 15px 15px 20px;
+	position: fixed;
+	opacity:1;
+	width: 100%;
+	top:100vh;
+	/* height:auto; */
+	height: 100vh;
+	-webkit-transition: -webkit-transform 0.8s;
+	transition: -webkit-transform 0.8s;
+	transition: transform 0.8s;
+	transition: transform 0.8s, -webkit-transform 0.8s;
+	z-index:4;
+	border-top-right-radius: 0;
+	border-top-left-radius: 30px;
+}
+
+/*Esconde o input*/
+#toggle-topicos {display: none;}
+
+#bt-topicos {
+	display: inline-block;
+	position: absolute;
+	width: 52px;
+	height: 47px;
+	background-color: #fff;
+	font-size: 1.5rem;
+	line-height: 36px;
+	text-align: center;
+	color: var(--azul-escuro);
+	top:-60px;
+	right: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	transition: all 0.25s ease;
+	/* -ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform:rotate(90deg); */
+	padding-top:10px;
+}
+
+#bt-topicos.icon-line-chevron-left::before {
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform:rotate(90deg);
+	display:block;
+}
+
+#bt-topicos.shadow {box-shadow: -3px 1px 2px rgba(0, 0, 0, 0.05) !important;}
+
+/*Esconde/exibe o menu de tópicos*/
+#toggle-topicos:checked~#nav-menu-container {
+	-ms-transform: translateY(-70vh);
+	-o-transform: translateY(-70vh);
+	-moz-transform: translateY(-70vh);
+	-webkit-transform: translateY(-70vh);
+	transform: translateY(-75vh);
+	transition: all 0.8s ease;
+}
+
+#toggle-topicos:checked~#nav-menu-container #bt-topicos.icon-line-chevron-left::before {
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	transform:rotate(270deg);
+}
+
+#toggle-topicos:checked~#nav-menu-container #bt-topicos.shadow {
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+#nav-menu-container li {margin-bottom:0.5rem;}
+
+#nav-menu-container h6 {
+	margin-top: 0;
+	margin-bottom: 15px;
+	padding-bottom:8px;
+	font-size:1rem;
+	font-weight: 500;
+	border-bottom:1px solid var(--azul-claro);
+}
+
+#nav-menu-container .nav-menu p {
+	line-height: 1.8;
+	margin-bottom: 0.2rem;
+	font-size:1rem;
+}
+	
+#nav-menu-container .nav-menu a {
+	color: var(--preto);
+	margin: 0 0 5px;
+	outline: none;
+	padding: 0;
+	text-decoration: none !important;
+}
+
+#nav-menu-container .nav-menu a:hover {
+	text-decoration: underline !important;
+}
+
+/* Sinalização de Progresso */
+#nav-menu-container .col-2 {
+	display: inline-flex;
+	align-self: stretch;
+	align-items: start;
+	justify-content: center;
+}
+	
+#nav-menu-container .col-2::after {
+	content: "";
+	position: absolute;
+	border-left: 2px solid var(--cinza-medio);
+	z-index: 1;
+}
+
+/*Configura o ítem ativo e os passados*/
+#nav-menu-container .active .col-2::after,
+#nav-menu-container .concluido .col-2::after  {
+	border-left: 2px solid var(--azul-claro);
+}
+
+#nav-menu-container .concluido .col-2::after  {
+	border-left-color: var(--azul-escuro);
+}
+	
+#nav-menu-container .active a,
+#nav-menu-container .concluido a  {
+	color: var(--azul-claro);
+	font-weight: 700;
+}
+
+#nav-menu-container .concluido a { 
+	color: var(--azul-escuro);
+	font-weight: 400;
+}
+
+/*Linha*/
+#nav-menu-container .col-2.full::after {
+	height: 100%;
+	left: calc(50% - 1px);
+}
+	
+/*No último ítem, remove a linha*/
+.timeline-z-estrutura.row .col-2.to.end::after {
+	display:none;
+}
+
+/*Desenha a bolinha (marcador)*/
+#nav-menu-container .marcador {
+	background-color: #DADADA;
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding: 6px;
+	border-radius: 50%;
+	color: #fff;
+	max-height: 40px;
+	z-index: 2;
+}
+
+	#nav-menu-container .active .marcador,
+	#nav-menu-container .concluido .marcador  {
+		background-color: var(--azul-escuro);
+	}
+	
+	#nav-menu-container .active .marcador {
+		background-color: var(--azul-claro);
+	}
+
+/*Telas iguais ou menores que 320px*/
+
+@media (max-width: 320px){
+
+	#nav-menu-container .nav-menu p {
+		line-height: 1.5;
+	}
+
+	/*Esconde/exibe o menu de tópicos*/
+	#toggle-topicos:checked~#nav-menu-container {
+	-ms-transform: translateY(-90vh);
+	-o-transform: translateY(-90vh);
+	-moz-transform: translateY(-90vh);
+	-webkit-transform: translateY(-90vh);
+	/* transform: translateY(-90vh); */
+	transform: translateY(-90vh);
+	transition: all 0.8s ease;
+	}
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	#nav-menu-container {
+		background: #fff;
+		font-size: 0.7rem;
+		line-height: 1.1rem;
+		margin: 0;
+		opacity: 1;
+		padding:15px 15px 15px 20px;
+		position: fixed;
+		top: 20%;
+		right: 0;
+		bottom:auto;
+		width: 220px;
+		height: auto;
+		-webkit-transition: -webkit-transform 0.8s;
+		transition: -webkit-transform 0.8s;
+		transition: transform 0.8s;
+		transition: transform 0.8s, -webkit-transform 0.8s;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	/*Esconde o input*/
+	#toggle-topicos {display: none;}
+		
+	#bt-topicos {
+		display: inline-block;
+		position: relative;
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		font-size: 1.25rem;
+		line-height: 20px;
+		text-align: center;
+		color: var(--azul-escuro);
+		top: -15px;
+		left: -40px;
+		right: 30px;
+		border-radius: 4px;
+		border-top-right-radius:0;
+		border-bottom-left-radius:4px;
+		border-bottom-right-radius:4px;
+		transition: all 0.25s ease;
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		transform:rotate(90deg);
+	}
+
+	#bt-topicos.shadow {box-shadow: -3px 1px 2px rgba(0, 0, 0, 0.05) !important;}
+	
+	#bt-topicos:hover {
+		background-color: var(--azul-claro); 
+		color:#fff;
+	}
+		
+	/*Esconde/exibe o menu de tópicos*/
+	#toggle-topicos:checked~#nav-menu-container {
+		-ms-transform: translateX(220px);
+		-o-transform: translateX(220px);
+		-moz-transform: translateX(220px);
+		-webkit-transform: translateX(220px);
+		transform: translateX(220px);
+		transition: all 0.8s ease;
+		}
+	
+	/*Troca a cor do botão de tópicos*/
+	#toggle-topicos:checked~#nav-menu-container #bt-topicos.shadow {
+		background:var(--azul-claro);
+		color:#fff;
+		transition: all 0.25s ease;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	#toggle-topicos:checked~#nav-menu-container #bt-topicos.icon-line-chevron-left::before {
+		-ms-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-webkit-transform: rotate(270deg);
+		transform:rotate(270deg);
+	}
+		
+	#nav-menu-container .nav-menu.nav-pills  .nav-link.active {background: transparent;}
+	
+	#nav-menu-container li {margin-bottom:0.5rem;}
+	
+	#nav-menu-container h6 {
+		margin-top: 0;
+		margin-bottom: 15px;
+		padding-bottom:8px;
+		font-size:0.7rem;
+		font-weight: 500;
+		border-bottom:1px solid var(--azul-claro);
+	}
+	
+	#nav-menu-container .nav-menu p {
+		line-height: 1.1;
+		margin-bottom: 0.5rem;
+		font-size:0.7rem;
+	}
+		
+	#nav-menu-container .nav-menu a {
+		color: var(--preto);
+		margin: 0 0 5px;
+		outline: none;
+		padding: 0;
+		text-decoration: none !important;
+	}
+	
+	#nav-menu-container .nav-menu a:hover {
+		text-decoration: underline !important;
+	}
+	
+	/* Sinalização de Progresso */
+	#nav-menu-container .col-2 {
+		display: inline-flex;
+		align-self: stretch;
+		align-items: start;
+		justify-content: center;
+	}
+		
+	#nav-menu-container .col-2::after {
+		content: "";
+		position: absolute;
+		border-left: 2px solid var(--cinza-medio);
+		z-index: 1;
+	}
+	
+	/*Configura o ítem ativo e os passados*/
+	#nav-menu-container .active .col-2::after,
+	#nav-menu-container .concluido .col-2::after  {
+		border-left: 2px solid var(--azul-claro);
+	}
+	
+	#nav-menu-container .concluido .col-2::after  {
+		border-left-color: var(--azul-escuro);
+	}
+		
+	#nav-menu-container .active a,
+	#nav-menu-container .concluido a  {
+		color: var(--azul-claro);
+		font-weight: 700;
+	}
+	
+	#nav-menu-container .concluido a { 
+		color: var(--azul-escuro);
+		font-weight: 400;
+	}
+	
+	/*Linha*/
+	#nav-menu-container .col-2.full::after {
+		height: 100%;
+		left: calc(50% - 1px);
+	}
+		
+	/*No último ítem, remove a linha*/
+	.timeline-z-estrutura.row .col-2.to.end::after {
+		display:none;
+	}
+	
+	/*Desenha a bolinha (marcador)*/
+	#nav-menu-container .marcador {
+		background-color: #DADADA;
+		font-size: 1.25rem;
+		font-weight: 700;
+		padding: 6px;
+		border-radius: 50%;
+		color: #fff;
+		max-height: 40px;
+		z-index: 2;
+	}
+	
+		#nav-menu-container .active .marcador,
+		#nav-menu-container .concluido .marcador  {
+			background-color: var(--azul-escuro);
+		}
+		
+		#nav-menu-container .active .marcador {
+			background-color: var(--azul-claro);
+		}
+
+}
+
+/* Fim do Menu de Tópicos
+------------------------*/
+
+/* Topo
+------------------------*/
+
+#header {
+	position: relative;
+	z-index: 4;
+}
+
+/*Tamanho do logo para mobile*/
+#logo img {height: 40px;}
+
+/* Retirar a borda lateral do topo */
+.full-header .primary-menu .menu-container,
+.transparent-header.full-header.dark .primary-menu .menu-container {border-right: none;}
+
+/* Menu */
+#header .menu-link {
+	font-weight:500;
+	text-decoration: none !important;
+}
+
+#header .menu-link:hover {color:var(--azul-claro);}
+
+/* Submenu */
+.menu-curso .sub-menu-container .menu-item > .menu-link {
+	text-transform:none;
+	padding: 11px 35px 11px 5px;
+}
+
+.menu-curso .sub-menu-container .menu-item:hover > .menu-link {color: var(--azul-escuro);}
+
+.dark .menu-curso .menu-item:hover > .menu-link, 
+.dark .menu-curso .menu-item.current > .menu-link {color: #02c8da;}
+
+.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item:hover > .menu-link {
+    background-color: rgba(0,0,0,0.1);
+    color: var(--azul-claro);
+}
+
+/* Configura a Label dentro do submenu de módulos */
+.menu-curso .badge {
+	background-color: var(--azul-claro);
+	color:#fff;
+	display:block;
+	line-height: 1.25;
+	padding:15px;
+	text-align: left;
+	white-space: normal;
+	margin-top:15px;
+}
+
+/*Breadcrumb*/
+.breadcrumb.header {
+    position: absolute !important;
+    width: 100% !important;
+    top: 121% !important;
+    left: auto !important;
+    right: 0 !important;
+    margin: 0 !important;
+	background-color: var(--preto-alpha) !important;
+	color:#fff !important;
+    padding: 3px 25px 3px 0 !important;
+    font-size: 0.8rem;
+    transform: translateY(-50%);
+	height: 30px;
+}
+
+#header:not(.sticky-header) .breadcrumb.header  {
+	transition: opacity 0.5s ease-out;
+	opacity:0;
+	background-color: #fff !important;
+	position: absolute !important;
+	top: 129% !important;
+	z-index: 1;
+	border-radius: 0;
+}
+
+#header.sticky-header .breadcrumb.header {
+	top: 129% !important;
+	width: 100% !important;
+	background-color: #fff !important;
+	border-radius: 0;
+	border-bottom: 1px solid var(--cinza-claro);
+	border-top: 1px solid var(--cinza-claro);
+	box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+	color: var(--azul-escuro) !important;
+	transition: opacity 1s ease-out;
+	opacity:1;
+}
+
+.primary-menu-open #header.sticky-header .breadcrumb.header {
+	top: 105% !important;
+}
+
+#header.sticky-header .breadcrumb.header a {
+	color:var(--azul-escuro) !important;
+	text-decoration: none!important;
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+
+	/*Tamanho do logo*/
+	#logo img {height: 60px;}
+
+	/*Tamanho do header*/
+
+	.header-size-custom .header-wrap-clone {height: calc( 60px + 1px ) !important;}
+
+	#header.header-size-custom + .include-header {margin-top: calc( -60px - 2px ) !important;}
+
+	.header-size-custom.sticky-header-shrink #header-wrap #logo img {height: 50px;}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (70px - 22px)/2 */
+		padding-bottom: 24px; /* (70px - 22px)/2 */
+	}
+
+	.header-size-custom.sticky-header-shrink .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (70px - 22px)/2 */
+		padding-bottom: 24px; /* (70px - 22px)/2 */
+	}
+
+	/*Ajuste da cor das bordas direita e inferior*/
+	#header.transparent-header.full-header #header-wrap {
+		border-bottom-color: var(--cinza-claro);
+		padding-bottom: 10px;
+	}
+
+	#header.transparent-header.full-header #logo {border-right-color: var(--cinza-claro);}
+
+	#header.transparent-header:not(.sticky-header).full-header #header-wrap {
+		border-bottom-color: rgba(235,240,245, 0.2);
+		padding-bottom: 10px;
+	}
+
+	#header.transparent-header:not(.sticky-header).full-header #logo {border-right-color: rgba(235,240,245, 0.2);}
+
+	
+	/*Menu de Navegação*/
+
+	.menu-link {font-size:0.7rem;}
+
+	/*Ajuste na cor do link do menu, quando o header for transparente*/
+	#header.transparent-header:not(.sticky-header) .menu-link {color: #fff;}
+
+	/*Posição do menu*/
+	.primary-menu {margin-right: 15px;}
+
+	/*Submenu*/
+
+	.menu-curso .menu-container > .menu-item:not(.mega-menu) .sub-menu-container {padding:0 0 10px 0}
+
+	.menu-curso .badge {margin:5px;}
+
+	#header.transparent-header:not(.sticky-header) .menu-curso .sub-menu-container .menu-item > .menu-link {color: var(--preto);}
+
+	#header.transparent-header:not(.sticky-header) .menu-curso .sub-menu-container .menu-item > .menu-link:hover {color: var(--azul-claro);}
+
+	.menu-curso .sub-menu-container .menu-item:hover > .menu-link {background-color: var(--cinza-claro);}
+
+	.menu-curso .sub-menu-container {border-top:2px solid var(--azul-escuro);}
+
+	.menu-curso .sub-menu-container .menu-item > .menu-link {padding: 10px 25px 10px 25px}
+
+	/* .menu-curso .sub-menu-container {width: 240px;} */
+
+	.menu-curso .sub-menu-container {width: 350px;}
+
+	.sub-menu-container {left:-260px}
+
+	.menu-curso .sub-menu-container .menu-link div > i.icon-angle-down {right:-10px;}
+
+	/*Breadcrumb*/
+	.breadcrumb.header {
+		width: auto !important;
+		top: 121% !important;
+		background-color: var(--preto-alpha) !important;
+		color:#fff !important;
+		font-size:0.7rem;
+	}
+	
+	#header:not(.sticky-header) .breadcrumb.header  {
+		transition: opacity 0.5s ease-out;
+		opacity:0;
+		background-color: var(--preto-alpha) !important;
+		position: absolute !important;
+		top: 121% !important;
+		z-index: 1;
+		border-radius: 0;
+	}
+	
+	#header.sticky-header .breadcrumb.header {
+		width:auto !important;
+		top: 120% !important;
+		display:block;
+		background-color: var(--azul-escuro-alpha) !important;
+		color: #fff !important;
+		border-bottom: none;
+		border-top:none;
+	}
+	
+	#header.sticky-header .breadcrumb.header a {color:#fff !important;}
+	
+	#header.sticky-header .breadcrumb.header a:hover {color:var(--azul-escuro) !important;}
+
+}
+
+/* Fim do Topo 
+------------------------*/
+
+/* Título de Abertura
+------------------------*/
+
+.titulo {height:430px;}
+
+/* Se usar o slider */
+.titulo.slider-parallax {
+	background: rgba(0, 0, 0, 0) url('../img/curso1/bg-titulo.jpg') repeat scroll center center / cover; 
+	margin-top: -102px;
+}
+
+/* Se usar o parallax */
+#page-title.titulo.page-title-parallax {
+	background-image: url("../img/curso1/bg-titulo.jpg"); 
+	/* background: rgba(0, 0, 0, 0) url('../img/slider/swiper/1.jpg') repeat scroll center center / cover; */
+	background-size: cover; 
+	/* padding: 120px 0px;  */
+	background-position: 0px -200.316px;
+	z-index:0;
+}
+
+
+.titulo .slider-caption.slider-caption-center {max-width: 950px;}
+
+/* .titulo .slider-caption h1 {margin-top:3.5rem;} */
+
+#page-title.titulo h1 {
+	line-height: 1.1;
+	margin-bottom:1rem;
+	font-size:var(--h1-mobile);
+	text-transform:none;
+	letter-spacing: 0;
+	word-break: inherit;
+}
+
+.titulo .slider-caption h1 span,
+#page-title.titulo.page-title-parallax.titulo .slider-caption h1 span {font-size:2rem;}
+
+.titulo .slider-caption h2 {
+	font-family: var(--titulos);
+	font-size: var(--h2-desktop);
+	font-weight: 600;
+	letter-spacing: normal;
+	line-height: 1.2;
+	margin-bottom: 1rem !important;
+	text-transform: none;
+}
+
+/* .titulo .slider-caption.slider-caption-center {margin-top:5.6rem;} */
+
+.titulo .lead {
+	font-family: var(--subtitulos) !important;
+	font-style: italic !important;
+	font-size: 1.15rem !important;
+	font-weight: 400 !important;
+}
+
+.titulo h3, .titulo h4 {font-weight: 400;}
+
+.titulo .slider-caption p {
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+
+	/* Se usar o parallax */
+	#page-title.titulo.page-title-parallax {
+		background-position: 0px -50px;
+		height: 350px;
+	}
+
+	#page-title.titulo.page-title-parallax {
+		background-image: url("../img/curso1/bg-titulo.jpg"); 
+		background-size: cover; 
+		background-attachment: scroll;
+		/* padding: 120px 0px;  */
+		background-position: 0px -80px;
+	}
+}
+	
+/* Desktops*/
+@media (min-width: 992px) {
+
+	.titulo {height:400px;}
+	
+	/*Se usar o slider*/
+	.titulo.slider-parallax {
+		background: rgba(0, 0, 0, 0) url('../img/curso1/bg-titulo.jpg') repeat scroll center center / cover; 
+		margin-top: -102px;
+	}
+
+	/* Se usar img estática com parallax */
+	#page-title.titulo.page-title-parallax {
+		background: rgba(0, 0, 0, 0) url('../img/curso1/bg-titulo-desktop.jpg') repeat scroll center center / cover;
+		background-attachment: fixed;
+		position: absolute;
+		top:0;
+		width:100%;
+		height: 400px;
+		padding:100px 0;
+		background-position: 0px -400px;
+	}
+
+	#content {top:335px;}
+
+	/* .titulo .slider-caption.slider-caption-center {margin-top:9.4rem;} */
+
+	.titulo h1,
+	#page-title.titulo h1 {
+		line-height: 1.1;
+		margin-bottom:1rem;
+		font-size:var(--h1-desktop);
+		text-transform:none;
+		letter-spacing: 0;
+	}
+
+	.titulo .slider-caption.slider-caption-center {margin-top:1rem;}
+
+	.titulo .slider-caption h1 span,
+	#page-title.titulo .slider-caption h1 span {
+		font-size:var(--h2-desktop);
+		font-weight:400;
+	}
+
+	.titulo .slider-caption h2 {margin-bottom:0 !important;}
+
+	.titulo .lead {
+		font-size: var(--h4-desktop) !important;
+	}
+
+	/*Lista de Aulas (aparece somente no desktop) */
+
+	.aulas {margin-top:29px;}
+
+	.aulas ul {
+		list-style:none;
+	}
+	
+	.aulas .button {
+		background-color: var(--azul-escuro);
+		font-size:0.7rem;
+		padding: 15px;
+		margin: 0 2px;
+		border-radius:5px 5px 0 0;
+		height: 49px;
+		color:#fff !important;
+	}
+	
+	.aulas .button:hover {
+		background-color: var(--azul-claro-alpha);
+		transition:0.5s;
+		transform: translate(0, -15px);
+		height:64px;
+	}
+	
+	.aulas .button.active {
+		background:var(--cinza-claro);
+		color:var(--preto) !important;
+		transform: translate(0, -15px);
+		height:64px;
+	}
+	
+	.aulas .button.active:hover {
+		color:var(--preto);
+		transform: translate(0, -15px);
+	}
+
+	.aulas a {text-decoration: none !important;}
+}
+
+/* Fim do Título de Abertura
+------------------------*/
+
+/* Sessões
+------------------------*/
+.section {
+	width:auto;
+	padding:0;
+	background:transparent;
+}
+.divider {margin: 2rem auto;}
+
+pre {
+	background-color:var(--bg-section);
+	border: 1px dotted var(--preto);
+	padding: 0 20px;
+	margin: 1rem 0 2rem;
+	font-size: 0.85rem;
+}
+
+pre code {white-space: pre-line;}
+
+/* Botões
+------------------------*/
+
+/* Cor dos botões */
+.bt-azul-escuro {background: var(--azul-escuro);}
+.bt-azul-claro {background:var(--azul-claro);}
+
+/* Botão Primário */
+
+.button {
+	background-color: var(--azul-escuro);
+	text-decoration: none !important;
+}
+
+.button:hover {
+    background-color:var(--azul-claro);
+}
+
+/* Botão Secundário */
+
+.button.button-border {
+    border: 2px solid var(--azul-escuro);
+    background-color: transparent;
+    color: var(--azul-escuro);
+    background-color: transparent;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.button.button-border:not(.button-fill):hover {
+    background-color: var(--azul-escuro);
+    color: #FFF;
+    border-color: transparent !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	.button,
+	.button.button-large  {
+		font-size:0.8rem;
+	}
+}
+
+/* Rodapé (Barra de Logos)
+------------------------*/
+
+#footer {
+	position: relative;
+    background-color: var(--azul-escuro);
+    /* border-top: 5px solid rgba(0,0,0,0.2); */
+}
+
+#footer h6 {
+	color:#fff;
+	font-weight: 500;
+}
+
+/* Desktops*/
+@media (min-width: 992px) {
+	#footer {top:335px;}
+}
